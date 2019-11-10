@@ -18,3 +18,20 @@
 console.log('Hello World from Webpacker')
 
 import './hello_vue'
+
+import Vue from 'vue'
+
+
+var XComponent = Vue.component('x-component', {
+  template: '#x-component', data: function() {
+  return {
+    message: 'Hello x-template! xxx'
+  } }
+});
+
+document.addEventListener('turbolinks:load', () => {
+  var app = new Vue({
+    el: '#app',
+    components: { XComponent }
+  });
+});

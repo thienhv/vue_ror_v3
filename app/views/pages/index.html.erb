@@ -25,3 +25,14 @@
 <br>
 
 <%= link_to 'New Page', new_page_path %>
+
+
+<div id="app">
+  <x-component></x-component>
+</div>
+
+<script type="text/x-template" id="x-component">
+  <div>
+    <p>{{ message }}</p>
+  </div>
+</script>
